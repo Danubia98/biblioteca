@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import br.com.aceleragep.Biblioteca.dtos.inputs.LivroInput;
+import br.com.aceleragep.Biblioteca.dtos.outputs.LivroAutorOutput;
 import br.com.aceleragep.Biblioteca.dtos.outputs.LivroOutput;
 import br.com.aceleragep.Biblioteca.entities.LivroEntity;
 
@@ -37,4 +38,12 @@ public class LivroConvert {
 	public Page<LivroOutput> listPageEntityToListPageOutput(Page<LivroEntity> livrosLocalizados) {
 		return livrosLocalizados.map(this :: entityToOutput);
 	}
+	public LivroAutorOutput entityToSemAutorOutput(LivroEntity livroEntity) {
+        return modelMapper.map(livroEntity, LivroAutorOutput.class);
+        	
+        }
+	public Page<LivroAutorOutput> listPageEntityToListPageOutputCopy(Page<LivroEntity> livros) {
+		return livros.map(this::entityToSemAutorOutput);
+}
+	
 }

@@ -58,4 +58,11 @@ public class LivroService {
 		return encontrou;
 
 	}
-}
+
+	public Page<LivroEntity> buscaLivrosPeloIdAutor(Long id, Pageable paginacao) {
+	return livroRepository.findAllByAutoresId(id,paginacao);
+	}
+
+	
+	}
+
