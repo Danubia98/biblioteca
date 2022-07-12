@@ -3,10 +3,12 @@ package br.com.aceleragep.Biblioteca.services;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.aceleragep.Biblioteca.entities.AutorEntity;
 import br.com.aceleragep.Biblioteca.repositories.AutorRepository;
 
+@Service
 public class AutorService {
 
 	@Autowired

@@ -4,11 +4,14 @@ import javax.validation.Valid;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Component;
 
 import br.com.aceleragep.Biblioteca.dtos.inputs.LivroInput;
 import br.com.aceleragep.Biblioteca.dtos.outputs.LivroOutput;
 import br.com.aceleragep.Biblioteca.entities.LivroEntity;
 
+@Component
 public class LivroConvert {
 
 	@Autowired
@@ -26,4 +29,12 @@ public class LivroConvert {
 
 	}
 
+	public void copyInputToEntity(LivroEntity livroLocalizado, @Valid LivroInput livroInput) {
+		modelMapper.map(livroInput, livroLocalizado);
+		
+	}
+
+	public Page<LivroOutput> listPageEntityToListPageOutput(Page<LivroEntity> livrosLocalizados) {
+		return livrosLocalizados.map(this :: entityToOutput);
+	}
 }
