@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import br.com.aceleragep.Biblioteca.dtos.inputs.LivroInput;
 import br.com.aceleragep.Biblioteca.entities.AutorEntity;
 import br.com.aceleragep.Biblioteca.entities.LivroEntity;
+import br.com.aceleragep.Biblioteca.exceptions.NotFoundBussinessException;
 import br.com.aceleragep.Biblioteca.repositories.LivroRepository;
 
 @Service
@@ -32,7 +33,7 @@ public class LivroService {
 
 	public LivroEntity buscaLivroPeloId(Long id) {
 		return livroRepository.findById(id)
-				.orElseThrow(() -> new RuntimeException(String.format("Livro %d não encontrado", id)));
+				.orElseThrow(() -> new NotFoundBussinessException(String.format("Livro %d não encontrado", id)));
 
 	}
 

@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import br.com.aceleragep.Biblioteca.entities.AutorEntity;
+import br.com.aceleragep.Biblioteca.exceptions.NotFoundBussinessException;
 import br.com.aceleragep.Biblioteca.repositories.AutorRepository;
 
 @Service
@@ -22,7 +23,7 @@ public class AutorService {
 		if (encontrou.isPresent()) {
 			return encontrou.get();
 		} else {
-			throw new RuntimeException("Autor " + id + " não encontrado");
+			throw new NotFoundBussinessException("Autor " + id + " não encontrado");
 
 		}
 	}
