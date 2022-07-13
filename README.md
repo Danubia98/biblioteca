@@ -39,8 +39,12 @@ Clique em 'Browse..' e procure o local onde o projeto está e o selecione (Caso 
 Por fim clique em Finish
 Também é necessário configurar a biblioteca Lombok na IDE
 Utilize as configurações do arquivo application.properties para configurar o banco de dados
-O Eclipse deve baixar algumas dependencias para configurar o projeto, aguarde até finalizar. Ao finalizar, você pode executar a aplicação  																					
-	
+O Eclipse deve baixar algumas dependencias para configurar o projeto, aguarde até finalizar. Ao finalizar, você pode executar a aplicação  																		
+
+📁 Acesso ao projeto:
+
+Você pode acessar os arquivos do projeto clicando
+
   📚 Swagger:
   
 Após rodar a aplicação você pode acessar a documentação swagger pela url:
