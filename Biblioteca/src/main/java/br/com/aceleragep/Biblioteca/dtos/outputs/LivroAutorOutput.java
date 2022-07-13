@@ -1,17 +1,19 @@
 package br.com.aceleragep.Biblioteca.dtos.outputs;
 
-import java.util.List;
-
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class LivroOutput {
+public class LivroAutorOutput {
 
 	private Long id;
 	private String titulo;
 	private Integer anoLancamento;
-	private List<AutorOutput> autores;
-
+	
+	
+	
+	
+	
+	
 }
