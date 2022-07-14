@@ -43,7 +43,9 @@ O Eclipse deve baixar algumas dependencias para configurar o projeto, aguarde at
 
 📁 Acesso ao projeto:
 
-Você pode acessar os arquivos do projeto clicando
+Você pode acessar os arquivos do projeto clicando aqui(https://github.com/Danubia98/biblioteca/tree/main/Biblioteca/src)
+
+
 
   📚 Swagger:
   
